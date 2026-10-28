@@ -1,0 +1,181 @@
+/* login.css - Premium Access Portal */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    /* Background handled by Background3D */
+    padding-top: 80px;
+    /* Offset for navbar */
+}
+
+/* Typography */
+span.title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: var(--grade-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--text-highlight);
+    /* Fallback */
+    margin-bottom: 8px;
+    line-height: 1.1;
+    text-align: center;
+    opacity: 0;
+    animation: slideUpFade 0.8s var(--ease-relax) forwards;
+}
+
+span.sub-title {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    margin-bottom: 48px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: slideUpFade 0.8s var(--ease-relax) 0.1s forwards;
+}
+
+/* Form Box - Premium Glass (Light) */
+.formbox {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.7);
+    /* Light base */
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 40px 80px -20px rgba(100, 116, 139, 0.2);
+    /* Soft slate shadow */
+    opacity: 0;
+    animation: scaleIn 0.6s var(--ease-elastic) 0.2s forwards;
+    transition: transform 0.4s var(--ease-elastic);
+}
+
+.formbox:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 50px 100px -20px rgba(100, 116, 139, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+}
+
+.formbox form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs */
+input.writable {
+    background: white;
+    border: 1px solid #e2e8f0;
+    /* Slate-200 */
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #1e293b;
+    /* Slate-800 */
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.writable:focus {
+    outline: none;
+    background: white;
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+input.writable::placeholder {
+    color: #94a3b8;
+    /* Slate-400 */
+    font-weight: 400;
+}
+
+/* Submit Button */
+input.submit {
+    /* Premium Button Style but for input type="submit" */
+    background: var(--grade-primary);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 16px;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.3);
+    transition: all 0.4s var(--ease-elastic);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input.submit:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.5);
+}
+
+input.submit:active {
+    transform: translateY(0) scale(0.98);
+}
+
+input.submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* Secondary Actions */
+button.submit {
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    align-self: center;
+    /* Center distinct */
+    text-decoration: none;
+}
+
+button.submit:hover {
+    color: var(--primary-glow);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-container {
+        padding-top: 100px;
+        /* Ensure title is visible below nav */
+        justify-content: flex-start;
+        /* Allow scrolling without centering vertically blocking top */
+    }
+
+    .formbox {
+        padding: 24px;
+        width: 90%;
+    }
+
+    span.title {
+        font-size: 2.5rem;
+    }
+
+    span.sub-title {
+        font-size: 0.95rem;
+        margin-bottom: 32px;
+    }
+}

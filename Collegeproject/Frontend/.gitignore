@@ -1,0 +1,42 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor folders
+.vscode/
+.idea/
+
+# Mac system files
+*.DS_Store
+
+# coverage directory used by testing tools
+/coverage
+
+# optional npm cache directory
+.npm
+
+# parcel-bundler cache (if used)
+/.cache
+
+# ESLint cache
+.eslintcache
+
+# macOS system files
+.DS_Store
+public/rain_v3.2.glb
+dist/

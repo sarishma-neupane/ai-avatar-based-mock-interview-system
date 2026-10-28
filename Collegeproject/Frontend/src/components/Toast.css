@@ -1,0 +1,165 @@
+/* Toast.css - Premium Notification Helper */
+
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+    /* Allow clicking through container */
+}
+
+.toast-message {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.85);
+    /* Glass-like */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow:
+        0 10px 40px -10px rgba(0, 0, 0, 0.1),
+        0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 320px;
+    max-width: 420px;
+    transform-origin: top right;
+    animation: toastSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    color: #1e293b;
+}
+
+.toast-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    background: #cbd5e1;
+}
+
+.toast-message.success::before {
+    background: #22c55e;
+}
+
+.toast-message.error::before {
+    background: #ef4444;
+}
+
+.toast-message.info::before {
+    background: #3b82f6;
+}
+
+.toast-message.warning::before {
+    background: #f59e0b;
+}
+
+.toast-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.toast-message.success .toast-icon {
+    color: #22c55e;
+}
+
+.toast-message.error .toast-icon {
+    color: #ef4444;
+}
+
+.toast-message.info .toast-icon {
+    color: #3b82f6;
+}
+
+.toast-message.warning .toast-icon {
+    color: #f59e0b;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    color: #0f172a;
+}
+
+.toast-desc {
+    font-size: 0.85rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.toast-close {
+    color: #94a3b8;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 4px;
+    transition: color 0.2s;
+}
+
+.toast-close:hover {
+    color: #0f172a;
+}
+
+/* Hover Effect */
+.toast-message:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 15px 50px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes toastSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes toastFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(20px) scale(0.9);
+    }
+}
+
+.toast-hidden {
+    animation: toastFadeOut 0.3s forwards;
+}
+
+/* Progress Bar (Optional) */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    /* Start after border */
+    height: 3px;
+    background: currentColor;
+    opacity: 0.2;
+    width: 100%;
+}

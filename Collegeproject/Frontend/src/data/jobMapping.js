@@ -1,0 +1,50 @@
+/**
+ * Job Role to Focus Area Mapping
+ * Extracted from provided official job role list.
+ */
+export const jobRoleMapping = {
+    "System Analyst": ["Functional Analysis", "System Design", "Data Modelling", "Testing", "Security", "Requirements Analysis"],
+    "Full Stack Developer": ["ReactJS", "NodeJS", "MongoDB", "ExpressJS", "System Design"],
+    "Frontend Developer": ["HTML", "CSS", "JavaScript", "React", "UI/UX"],
+    "Backend Developer": ["NodeJS", "REST APIs", "Databases", "Authentication", "Security"],
+    "Software Engineer": ["OOP", "Data Structures", "Algorithms", "Design Patterns", "Debugging"],
+    "Mobile App Developer": ["Flutter", "React Native", "Android SDK", "iOS", "Firebase"],
+    "DevOps Engineer": ["CI/CD", "Docker", "Kubernetes", "AWS", "Monitoring"],
+    "QA Engineer": ["Manual Testing", "Automation Testing", "Selenium", "Test Cases", "JIRA"],
+    "Data Analyst": ["Excel", "SQL", "Data Cleaning", "Tableau", "Power BI", "Python"],
+    "Data Scientist": ["Pandas", "Scikit-learn", "Statistics", "EDA", "Machine Learning"],
+    "ML Engineer": ["Deep Learning", "TensorFlow", "PyTorch", "Model Deployment", "NLP"],
+    "AI Engineer": ["Computer Vision", "Reinforcement Learning", "Neural Networks"],
+    "Cybersecurity Analyst": ["Penetration Testing", "Firewalls", "Vulnerability Scanning", "SIEM", "Threat Modelling"],
+    "Network Engineer": ["TCP/IP", "Routing", "Switching", "Firewall", "Load Balancing"],
+    "System Administrator": ["Linux", "Shell Scripting", "User Management", "Monitoring", "Backup"],
+    "Database Administrator": ["SQL", "Database Tuning", "Normalization", "Backup & Restore", "NoSQL"],
+    "Cloud Engineer": ["AWS", "Azure", "Terraform", "Kubernetes", "Serverless"],
+    "Blockchain Engineer": ["Solidity"],
+    "Embedded Systems Engineer": ["Microcontrollers", "C Programming", "IoT", "Sensors", "RTOS"],
+    "IoT Engineer": ["Sensor Integration", "MQTT", "IoT Protocols", "Embedded C", "Edge Computing"],
+    "Game Developer": ["Unity", "Unreal Engine", "C#", "Game Physics", "Animation"],
+    "AR/VR Developer": ["Unity", "Oculus SDK", "VR Interaction", "3D Modeling", "Rendering"],
+    "Software Architect": ["System Design", "Microservices", "Security", "Scalability", "Design Patterns"],
+    "Big Data Engineer": ["Hadoop", "Spark", "Kafka", "Hive", "ETL Pipelines"],
+    "Robotics Engineer": ["ROS", "Computer Vision", "Path Planning", "Sensors", "Control Systems"],
+    "Computer Vision Engineer": ["OpenCV", "YOLO", "Object Detection", "Face Recognition", "Image Segmentation"],
+    "NLP Engineer": ["Text Classification", "Named Entity Recognition", "LLMs", "Transformers", "BERT"],
+    "Hardware Design Engineer": ["Verilog", "VHDL", "FPGA", "PCB Design", "Digital Logic"],
+    "VLSI Engineer": ["ASIC", "RTL Design", "Timing Analysis", "Semiconductors", "EDA Tools"],
+    "Technical Product Manager": ["Agile", "Scrum", "Roadmaps", "Technical Documentation", "Product Strategy"],
+    "Technical Support Engineer": ["Debugging", "Customer Service", "Product Knowledge", "Logs Analysis", "Tools"],
+    "Research Scientist (CS)": ["Mathematical Modeling", "Machine Learning", "Optimization", "Scientific Publications"],
+    "Web Developer": ["HTML", "CSS", "JavaScript", "PHP", "Content Management Systems"],
+    "Site Reliability Engineer": ["Monitoring", "Incident Response", "Reliability Engineering", "Infrastructure"],
+    "Information Security Analyst": ["Encryption", "Risk Management", "Security Tools", "Policy Compliance", "IAM"],
+    "AI Prompt Engineer": ["LLM Prompting", "Natural Language"],
+    "Automation Engineer": ["CI/CD Pipelines", "Scripting", "Ansible", "Docker", "Infrastructure Automation"],
+    "Computer Engineer (Generalist)": ["Programming", "Networking", "Computer Architecture", "Digital Systems"],
+    "Compiler Engineer": ["Lexers & Parsers", "Intermediate Code", "LLVM", "Optimization", "Code Generation"],
+    "Firmware Engineer": ["C/C++", "Hardware Interfaces", "Bootloaders", "Real-Time Systems", "Memory Maps"],
+    "Simulation Engineer": ["MATLAB", "Simulink", "Modeling", "Real-Time Simulation", "Physics Engines"],
+    "Ethical Hacker": ["Penetration Testing"]
+};
+
+export const jobRolesList = Object.keys(jobRoleMapping);

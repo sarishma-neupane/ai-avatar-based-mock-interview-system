@@ -1,0 +1,141 @@
+/* Premium UI Theme Variables - Light Mode */
+:root {
+    /* Colors - Clean Light Theme */
+    --bg-deep: #f8fafc;
+    /* Slate-50 - Very soft white/grey */
+    --bg-surface: rgba(255, 255, 255, 0.7);
+    /* White glass */
+    --bg-surface-hover: rgba(255, 255, 255, 0.9);
+
+    /* Accents - Vibrant but Professional */
+    --primary-glow: #6366f1;
+    /* Indigo-500 */
+    --secondary-glow: #ec4899;
+    /* Pink-500 */
+    --text-highlight: #1e293b;
+    /* Slate-800 - Deep dark grey for headings */
+    --text-dim: #64748b;
+    /* Slate-500 - Soft grey for body */
+
+    /* Gradients */
+    --grade-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --grade-surface: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
+    --grade-border: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
+
+    /* Spacing */
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+
+    /* Shadows - Soft & Diffused for Light Mode */
+    --shadow-glow: 0 10px 40px rgba(99, 102, 241, 0.2);
+    --shadow-card: 0 10px 30px -5px rgba(100, 116, 139, 0.15);
+    /* Soft slate shadow */
+    --shadow-float: 0 20px 50px -10px rgba(100, 116, 139, 0.2);
+
+    /* Transitions */
+    --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-norm: 0.4s;
+}
+
+/* Global Reset Tweaks */
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-highlight);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Premium Glass Card Utility - Light Version */
+.glass-panel-premium {
+    background: var(--bg-surface);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-card), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-lg);
+    transition: all var(--duration-norm) var(--ease-smooth);
+}
+
+.glass-panel-premium:hover {
+    background: var(--bg-surface-hover);
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-float);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3 {
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #0f172a;
+    /* Slate-900 */
+}
+
+.text-gradient {
+    background: var(--grade-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+/* Premium Button */
+.btn-premium {
+    background: var(--grade-primary);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 32px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--duration-norm) var(--ease-elastic);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+}
+
+.btn-premium:hover::after {
+    opacity: 1;
+}
+
+/* Form Inputs Premium - Light Mode */
+.input-premium {
+    background: white;
+    border: 1px solid #e2e8f0;
+    /* Slate-200 */
+    border-radius: var(--radius-md);
+    padding: 16px;
+    color: #1e293b;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.input-premium:focus {
+    outline: none;
+    background: white;
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}

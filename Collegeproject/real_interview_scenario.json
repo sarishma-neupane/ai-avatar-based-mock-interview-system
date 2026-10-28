@@ -1,0 +1,69 @@
+{
+  "session": {
+    "session_id": "session_1709745600_ab12cd34",
+    "job_role": "Full Stack Developer",
+    "years_of_experience": "3 years",
+    "candidate_name": "Sujit Adhikari",
+    "interview_stage": "listening_for_answer",
+    "start_time": "2024-03-06T19:40:00Z"
+  },
+  "progress": {
+  
+    "current_question_index": 1,
+    "target_total_questions": 5
+  },
+  "current_state": {
+    "current_question": {
+      "question_id": "Q1",
+      "question": "Can you explain the difference between 'let', 'const', and 'var' in JavaScript, and when you would use each?",
+      "type": "objective",
+      "ideal_answer":
+       "'var' is function-scoped and can be re-declared. 'let' and 'const' are block-scoped.'let' allows re-assignment, while 'const' does not. Use 'const' by default, 'let' if you need to re-assign, and avoid 'var' in modern JS.",
+      "alternative_answers": [
+        "var is hoisted and initialized as undefined. let and const are also hoisted but not initialized (TDZ).",
+        "Block scope vs Function scope is the main difference. const is for constants, let is for variables."
+      ]
+    },
+    "subtitles": {
+      "question_subtitle": "Can you explain the difference between 'let', 'const', and 'var' in JavaScript, and when you would use each?",
+      "user_answer_subtitle": "So, var is functional scoped and can be redefined... but let and const are block scoped. I usually use const for everything unless I need to change it."
+    },
+    "multimodal_feedback": {
+      "posture": "APPROPRIATE",
+      "dominant_emotion": "HAPPY",
+      "emotion_confidence": 0.85,
+      "speaker_status": "single",
+      "has_speech": true,
+      "face_count": 1
+    }
+  },
+  "history": [
+    {
+      "question_id": "GREETING",
+      "question": "Good evening, John. I am HIMANI, your interviewer. Let's start our session by discussing some technical concepts.",
+      "user_response": "Hi Himani, I'm ready to start. Thank you for having me.",
+      "timestamp": "2024-03-06T19:40:15Z",
+      "type": "greeting",
+      "feedback": {
+        "success": true,
+        "positives": ["Polite and ready response", "Clear communication"],
+        "negatives": [],
+        "similarity_score": 0.0
+      }
+    }
+  ],
+  "upcoming": {
+    "preloaded_next_question": {
+      "question_id": "Q2",
+      "question": "What is the purpose of middleware in an Express.js application?",
+      "type": "objective"
+    }
+  },
+  "system_config": {
+    "is_listening": true,
+    "is_speaking": false,
+    "is_processing": false,
+    "camera_enabled": true,
+    "mic_enabled": true
+  }
+}
